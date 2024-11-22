@@ -1,61 +1,30 @@
-# CM-Docs
+# MLPerf Collective Mind: LLM Benchmarking Automation Documentation
+
+### **Introduction to MLPerf and CM4MLOps for LLMs**
+
+**MLPerf** is a widely recognized benchmarking framework designed to evaluate the performance of machine learning models across various domains. It provides standardized benchmarks that measure the efficiency, accuracy, and throughput of models and systems, enabling fair comparisons across different hardware and software configurations. MLPerf spans a range of tasks, including inference, training, and reinforcement learning, making it an essential tool for both researchers and industry practitioners.
+
+For large language models (LLMs), MLPerf benchmarks are crucial in assessing performance under diverse workloads, ranging from low-latency scenarios in datacenters to high-throughput requirements in edge devices. By using MLPerf, developers can validate the scalability and optimization of LLMs like GPT, Llama, and others across cutting-edge infrastructure.
+
+**CM4MLOps** (Collective Mind for MLOps) is a powerful open-source platform that integrates seamlessly with MLPerf to streamline and automate MLOps workflows. Designed for modern machine learning operations, CM4MLOps helps manage the complex lifecycle of LLM deployment, from model optimization to benchmarking. It supports:
+
+- **Automated Experimentation:** Simplifying the execution of MLPerf benchmarks with reproducible scripts and configurations.
+- **Cross-platform Integration:** Ensuring compatibility with various frameworks, hardware backends, and cloud services.
+- **Efficient Resource Utilization:** Leveraging hardware accelerators like GPUs and TPUs while enabling optimizations such as mixed-precision and TensorRT.
+
+With the rise of LLMs in applications like conversational AI, summarization, and code generation, MLPerf and CM4MLOps provide a robust foundation for evaluating and operationalizing these models. Together, they empower teams to optimize performance, identify bottlenecks, and ensure models meet the demanding requirements of modern AI applications.
+
+Welcome to the **MLPerf Collective Mind** benchmarking automation documentation! This guide will walk you through the steps needed to benchmark large language models (LLMs) using the MLPerf framework.
+
+## CM-Docs
 https://docs.mlcommons.org/inference/benchmarks/language/llama2-70b/
 
-## CM Installation
-* Make current directory as home direcory where CM folder will be generated
-```sh
-export HOME=$PWD
-```
+## Table of Contents
 
-* Follow [this link](https://access.cknowledge.org/playground/?action=install) for installation
+1. **[Environment Setup Guide](https://github.com/KrArunT/CM-Docs/wiki/Getting-started#environment-setup)**   
+2. **[Run Benchmark](https://github.com/KrArunT/CM-Docs/wiki/Getting-started#run-benchmark)** \
+  * [Huggingface Login](https://github.com/KrArunT/CM-Docs/wiki/Getting-started#hugging-face-login)
 
-```sh
-sudo apt update -y
-sudo apt install -y python3 python3-pip python3-venv git git-lfs wget curl
-```
+3. **[Screen Command Management](https://github.com/KrArunT/CM-Docs/wiki/Getting-started#screen-management)**   
 
-```sh
-python3 -m venv cm
-source cm/bin/activate
-
-python3 -m pip install cmind -U
-
-export CM_REPOS="$HOME/CM"
-
-cm init --repo=mlcommons@cm4mlops --branch=mlperf-inference
-
-git clone https://github.com/mlcommons/ck
-export CM_HOME="$PWD/ck/cm/cmind"
-cm reindex repo
-
-cm test core
-```
-
-### Set up CM virtual environment
-
-<details>
-<summary><b>Click if you want to use Python virtual environment</b></summary>
-
-We suggest you to install a python virtual environment via CM though it's not strictly necessary 
-(CM can automatically detect and reuse your Python installation and environments):
-```bash
-cm run script "install python-venv" --name=loadgen
-```
-
-You can also install a specific version of Python on your system via:
-```bash
-cm run script "install python-venv" --name=loadgen --version=3.10.7
-```
-
-By default, CM will be asking users to select one from all detected and installed Python versions
-including the above one, any time a script with python dependency is run. To avoid that, you 
-can set up the following environment variable with the name of the current virtual environment:
-
-```bash
-export CM_SCRIPT_EXTRA_CMD="--adr.python.name=loadgen"
-```
-
-The `--adr` flag stands for "Add to all Dependencies Recursively" and will find all sub-dependencies on other CM scripts 
-
-</details>
-
+4. **[Important Links](https://github.com/KrArunT/CM-Docs/wiki#important-links)**   
