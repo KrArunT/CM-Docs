@@ -20,11 +20,11 @@ Welcome to the **MLPerf Collective Mind** benchmarking automation documentation!
 https://docs.mlcommons.org/inference/benchmarks/language/llama2-70b/
 
 ## Table of Contents
-
-1. **[Environment Setup Guide](https://github.com/KrArunT/CM-Docs/wiki/Getting-started#environment-setup)**   
-2. **[Run Benchmark](https://github.com/KrArunT/CM-Docs/wiki/Getting-started#run-benchmark)** \
+1. **[CM Installation](https://github.com/KrArunT/CM-Docs/wiki/CM-Installation)** 
+2. **[Environment Setup Guide](https://github.com/KrArunT/CM-Docs/wiki/Getting-started#environment-setup)**   
+3. **[Run Benchmark](https://github.com/KrArunT/CM-Docs/wiki/Getting-started#run-benchmark)** \
   * [Huggingface Login](https://github.com/KrArunT/CM-Docs/wiki/Getting-started#hugging-face-login)
 
-3. **[Screen Command Management](https://github.com/KrArunT/CM-Docs/wiki/Getting-started#screen-management)**   
+4. **[Screen Command Management](https://github.com/KrArunT/CM-Docs/wiki/Getting-started#screen-management)**   
 
-4. **[Important Links](https://github.com/KrArunT/CM-Docs/wiki#important-links)**   
+5. **[Important Links](https://github.com/KrArunT/CM-Docs/wiki#important-links)**   
